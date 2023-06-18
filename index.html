@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="block.css">
+  
+  <title>Navigation Bar with Propdown Menu</title>
+</head>
+
+<body style="background: white;">
+  <header id="nav-menu" aria-label="navigation bar">
+    <div class="container">
+      <div class="nav-start">
+        <a class="logo" href="index.html">
+          <img src="assets/images/toddle_logo.png" width="100%" height="100%" alt="Inc Logo" />
+        </a>
+        <!-- <nav class="menu">
+          <ul class="menu-bar">
+
+            <li>
+              <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false"
+                aria-label="discover">
+                Discover
+                <i class="bx bx-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div id="dropdown2" class="dropdown">
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Browse Categories</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#branding">Branding</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#illustrations">Illustration</a>
+                  </li>
+                </ul>
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Download App</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#mac-windows">MacOS & Windows</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#linux">Linux</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav-link" href="/">Jobs</a></li>
+            <li><a class="nav-link" href="/">Livestream</a></li>
+            <li><a class="nav-link" href="/">About</a></li>
+          </ul>
+        </nav> -->
+      </div>
+      <div class="bar-container">
+        <form>
+          <i class="fas fa-search"></i>
+          <input type="text" name="" id="serach-item" placeholder="Search..">
+        </form>
+      </div>
+      
+      <div class="nav-end">
+        <div class="right-container">
+          <img src="assets/icons/t_plus.svg" width="" alt="" class="">
+
+          <button class="btn btn-primary" onclick="openPopup()" onclick="toggle()"><i class="fa-solid fa-plus fa-fade fa-sm"></i>Create new board</button>
+        </div>
+
+        <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+          <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <h1 id="myboard">My boards</h1>
+  </div>
+  <div class="container">
+    <div class="frame1">
+      <div class="frame2"></div>
+      <div class="frame3">
+        <div class="frame4">Earth Changes and Journeys</div>
+      </div>
+      <div class="frame5">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="frame6">
+          <div class="option">Edit</div>
+          <div class="option">Delete</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="frame1">
+        <!-- <div id="popupCard" class="popup-card" style="display: none;"></div> -->
+        <div class="frame2" style="background: #FFEDC1;"></div>
+        <div class="frame3">
+          <div class="frame4">Eating Right</div>
+        </div>
+        <div class="frame5">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="frame6">
+            <div class="option">Edit</div>
+            <div class="option">Delete</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card popup" id="popup">
+    <div class="about"><img src="#" alt=""> Add a name for your board</div>
+    <!-- <span>About Me</span> -->
+    <div class="title">
+      <form>
+        <!-- <i class="fas fa-search"></i> -->
+        <input type="text" name="" id="#" placeholder="  Title.." style="width: 237px; height: 100%; border: 1px solid #dbdbdb;; border-radius: 20px;">
+      </form>
+    </div>
+    <p class="info">Select Post Colour
+      <p style="font-weight: 500; font-size: 12px; line-height: 20px; color: #2B2B2B;">
+        Here are some templates to help you get started
+      </p>
+    </p>
+    <div class="share">
+      <a href="new_board.html">
+        <img src="assets/images/Ellipse 1.png">
+      </a>
+      <a href="purple.html">
+        <img src="assets/images/Ellipse 2.png">
+      </a>
+      <a href="pink.html">
+        <img src="assets/images/Ellipse 3.png">
+      </a>
+      <a href="yellow.html">
+        <img src="assets/images/Ellipse 4.png">
+      </a>
+    </div>
+    <div class="new">
+      <button type="button" onclick="closePopup()" onclick="toggle()" style="color: white; padding: 0.8em 2.5em;">Close</button>
+      <button type="button" onclick="closePopup()" onclick="toggle()" style="color: white; background: #D33852;"><a href="new_board.html" style="color: white;"> Create board</a></button>
+
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    let popup= document.getElementById("popup");
+    function openPopup(){
+      popup.classList.add("open-card");
+    }
+    function closePopup(){
+      popup.classList.remove("open-card");
+    }
+  </script>
+  <script>
+    function toggle(){
+      var blur= document.getElementById('blur');
+      blur.classList.toggle('active')
+      var card = document.getElementById('popup');
+      card.classList.toggle('active')
+    }
+  </script>
+ 
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="block.css">
+    <style>
+        .logo {
+            position: relative;
+            display: flex;
+        }
+
+        .logo-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .logo-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            line-height: 1;
+            padding: 5px;
+            /* background-color: rgba(0, 0, 0, 0.7); */
+            border-radius: 5px;
+        }
+
+        .emt_state {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 55vh;
+        }
+
+        .emt_state img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .emt_state p {
+            text-align: center;
+        }
+
+        .body:not(header) {
+            background: #CAF8FF;
+        }
+
+        hr.solid {
+            border: 1px solid #EBEBEB;
+            ;
+        }
+        .fa-bookmark {
+    color: #ff5869; /* Replace "red" with the desired color */
+  }
+    </style>
+
+    <title>Navigation Bar with Propdown Menu</title>
+</head>
+
+<body>
+    <header id="nav-menu" aria-label="navigation bar" style="background: white;">
+        <div class="container">
+            <!-- <i class="fa-solid fa-less-than fa-beat-fade fa-sm"></i> -->
+
+            <!-- <div class="back">
+                <i class="fa-solid fa-less-than fa-beat-fade fa-sm"></i>
+            </div> -->
+            <div class="nav-start">
+                <!-- <div class="back">
+                    <i class="fa-solid fa-less-than fa-beat-fade fa-sm" ></i>
+                </div> -->
+                <a class="logo" href="index.html">
+                    <!-- <div class="back">
+                        <i class="fa-solid fa-less-than fa-beat-fade fa-sm"></i>
+                    </div> -->
+
+                    <img class="logo-image" src="assets/images/Fill 13.svg" alt="Inc Logo" />
+                    <span class="logo-text">t</span><i class="fa-solid fa-less-than fa-beat fa-sm" style="position: absolute;
+                        top: 17px;
+                        left: -26px;"></i>
+
+                </a>
+                <p style="font-weight: 700;
+font-size: 18px;
+line-height: 24px;">
+                    Bookmark
+                </p>
+
+
+                <!-- <nav class="menu">
+          <ul class="menu-bar">
+
+            <li>
+              <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false"
+                aria-label="discover">
+                Discover
+                <i class="bx bx-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div id="dropdown2" class="dropdown">
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Browse Categories</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#branding">Branding</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#illustrations">Illustration</a>
+                  </li>
+                </ul>
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Download App</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#mac-windows">MacOS & Windows</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="#linux">Linux</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav-link" href="/">Jobs</a></li>
+            <li><a class="nav-link" href="/">Livestream</a></li>
+            <li><a class="nav-link" href="/">About</a></li>
+          </ul>
+        </nav> -->
+            </div>
+            <div class="bar-container" style="left: -140px;
+    position: relative;">
+                <form>
+                    <i class="fas fa-search"></i>
+                    <input type="text" name="" id="serach-item" placeholder="Search..">
+                </form>
+            </div>
+
+            <div class="nav-end">
+                <div class="right-container">
+                    <!-- <img src="assets/icons/t_plus.svg" width="" alt="" class=""> -->
+
+                    <!-- <button class="btn btn-primary" onclick="openPopup()" onclick="toggle()"> -->
+                    <a href="bookmark.html"><i class="fa-regular fa-bookmark fa-beat fa-sm"></i></a>
+                    <!-- Create new board</button> -->
+                </div>
+
+                <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-menu" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="section">
+        <div class="container">
+            <h1 id="myboard">Your posts</h1>
+            <div class="right-container">
+                <!-- <img src="assets/icons/t_plus.svg" width="" alt="" class=""> -->
+
+                <button class="btn btn-primary" onclick="openPopup()" onclick="toggle()"><i
+                        class="fa-solid fa-plus fa-fade fa-sm"></i>Create new board</button>
+            </div>
+        </div>
+        <!-- <div class="emt_state">
+            <img src="assets/images/NoPostMobile.png" alt="Your Image">
+            <p style="font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;">Nothing here yet</p>
+            <p>Create your first post by clicking on the '+' button above</p>
+        </div> -->
+        <div class="dy_container">
+            <div class="dy_wrapper">
+                <div class="dy" style="background: white;">
+                    <div class="dy-content">
+                        
+                        <h2>Galapagos Islands,
+                            Ecuador</h2>
+                        <p>The Galápagos Islands is a volcanic archipelago in the Pacific Ocean. It's considered one of the
+                            world's foremost
+                            destinations for wildlife-viewing. A province of Ecuador, it lies about 1,000km off its coast. Its
+                            isolated terrain
+                            shelters a diversity of plant and animal species, many found nowhere else. Charles Darwin visited in
+                            1835, and his
+                            observation of Galápagos' species later inspired his theory of evolution.
+                        </p>
+                        <div class="status">
+                            <p>25th July</p>
+                            <a href=""><button class="read-btn"><i class="fa-regular fa-heart fa-shake fa-sm"></i><i class="fa-regular fa-bookmark fa-beat fa-sm" style="padding: 10px;"></i></button></a>
+                        </div>
+                    </div>
+        
+                    <img src="assets/images/image 4.png" alt="Laptop guy">
+                </div>
+            </div>
+            <div class="dy_wrapper">
+                <div class="dy" style="background: white;">
+                    <div class="dy-content">
+                        <h2>Lake Tekapo, New Zealand</h2>
+                        <p>While purple, pink, and blue-hued lupin flowers may not be native to New Zealand (they hail from North America), they
+                        really do seem to bloom most vibrantly on the Oceanian nation’s South Island. At Lake Tekapo, in particular, the flowers
+                        juxtapose against the backdrop of the crystal clear water to create one of the country’s most stunning vistas.
+                        </p>
+                        <div class="status">
+                            <p>1st August</p>
+                            <a href=""><button class="read-btn"><i class="fa-regular fa-heart fa-shake fa-sm"></i><i class="fa-regular fa-bookmark fa-beat fa-sm" style="padding: 10px;"></i></button></a>
+                        </div>
+                    </div>
+            
+                    <img src="assets/images/image 5.png" alt="Laptop guy">
+                </div>
+            </div>
+            <!-- <div class="dy_wrapper">
+                <div class="dy" style="background: white;">
+                    <div class="dy-content">
+                        <h2>Open Source Contributor</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugit nobis assumenda labore
+                            ipsum
+                            dicta pariatur quaerat porro facere quisquam minus molestiae, nulla tempore.</p>
+                        <div class="status">
+                            <p>March 30th, 2023</p>
+                            <a href=""><button class="read-btn">Read More</button></a>
+                        </div>
+                    </div>
+        
+                    <img src="images/dy3.png" alt="Laptop guy">
+                </div>
+            </div> -->
+        </div>
+
+        <!-- <div class="container"> -->
+        <!-- <div class="frame1">
+                <div class="frame2"></div>
+                <div class="frame3">
+                    <div class="frame4">Earth Changes and Journeys</div>
+                </div>
+                <div class="frame5">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="frame6">
+                        <div class="option">Edit</div>
+                        <div class="option">Delete</div>
+                    </div>
+                </div>
+            </div> -->
+
+
+        <!-- <div class="frame1">
+                    <div id="popupCard" class="popup-card" style="display: none;"></div>
+                    <div class="frame2" style="background: #FFEDC1;"></div>
+                    <div class="frame3">
+                        <div class="frame4">Eating Right</div>
+                    </div>
+                    <div class="frame5">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        
+                        <div class="frame6">
+                            <div class="option">Edit</div>
+                            <div class="option">Delete</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        <!-- <img class="empty" src="assets/images/NoPostMobile.png"> -->
+
+        <!-- </div> -->
+
+        <div class="card popup" id="popup">
+            <div class="about"><img src="#" alt=""> Create a post</div>
+            <span style="font-weight: 500;
+font-size: 14px;
+line-height: 20px;">Write something for your post</span>
+            <div class="title">
+                <form>
+                    <!-- <i class="fas fa-search"></i> -->
+                    <input type="text" name="" id="subjectInput" placeholder="  Subject.."
+                        style="width: 237px; height: 100%; border: 1px solid #dbdbdb;; border-radius: 20px;">
+                </form>
+            </div>
+            <hr style="border: none;">
+            <div class="title">
+                <form>
+                    <!-- <i class="fas fa-search"></i> -->
+                    <input type="text" name="" id="imageInput" placeholder="  Add your image"
+                        style="width: 237px; height: 100%; border: 1px solid #dbdbdb;; border-radius: 20px;">
+                </form>
+            </div>
+            <hr class="solid">
+
+            <p class="info" style="font-weight: 600;
+font-size: 16px;
+line-height: 24px;">What's on your mind?
+                <!-- <p style="font-weight: 500; font-size: 12px; line-height: 20px; color: #2B2B2B;">
+                Here are some templates to help you get started
+            </p> -->
+            </p>
+            <div class="title">
+                <form>
+                    <!-- <i class="fas fa-search"></i> -->
+                    <input type="text" name="" id="descriptionInput" placeholder=" Type here"
+                        style="width: 237px; height: 65px; border: 1px solid #dbdbdb;; border-radius: 20px;">
+                </form>
+            </div>
+            <!-- <div class="share">
+                <a href="">
+                    <img src="assets/images/Ellipse 1.png">
+                </a>
+                <a href="">
+                    <img src="assets/images/Ellipse 2.png">
+                </a>
+                <a href="">
+                    <img src="assets/images/Ellipse 3.png">
+                </a>
+                <a href="">
+                    <img src="assets/images/Ellipse 4.png">
+                </a>
+            </div> -->
+            <div class="new">
+                <!-- <button type="button" onclick="closePopup()" onclick="toggle()"
+                    style="color: white; padding: 0.8em 2.5em;">Close</button> -->
+                <button type="button" onclick="closePopup()" onclick="toggle()" onclick="publishPost()"
+                    style="color: white; background: #D33852;"><a href="new_post.html">Publish</a></button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup() {
+            popup.classList.add("open-card");
+        }
+        function closePopup() {
+            popup.classList.remove("open-card");
+        }
+    </script>
+    <script>
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active')
+            var card = document.getElementById('popup');
+            card.classList.toggle('active')
+        }
+    </script>
+
+</body>
+
+</html>
